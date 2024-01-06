@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 /**
  * Facilities.
@@ -58,7 +60,7 @@ $columns = [
     "attn" => true,
     "tax_id_type" => true,
     "primary_business_entity" => true,
-    "facility_npi" => true,
+    "hospital_registration_number" => true,
     "facility_taxonomy" => true,
     "facility_code" => "facility_id",
     "mail_street" => true,
@@ -218,7 +220,7 @@ $(function () {
                                     <?php echo ($iter3['inactive']) ? "<br>(" . xlt("Inactive") . ")" : ''; ?>
                                 </td>
                                 <td valign="top" class="text"><?php echo text($iter3["federal_ein"]); ?>&nbsp;</td>
-                                <td valign="top" class="text"><?php echo text($iter3["facility_npi"]); ?>&nbsp;</td>
+                                <td valign="top" class="text"><?php echo text($iter3["hospital_registration_number"]); ?>&nbsp;</td>
                                 <td valign="top" class="text"><?php echo text($varstreet) . "<br>" . text($varcity) . text($varstate) . text($iter3["country_code"]) . " " . text($iter3["postal_code"]); ?></td>
                                 <td valign="top" class="text"><?php echo text($varmstreet) . "<br>" . text($varmcity) . text($varmstate) . " " . text($iter3['mail_zip']); ?></td>
                                 <td><?php echo text($iter3["phone"]);?>&nbsp;</td>
